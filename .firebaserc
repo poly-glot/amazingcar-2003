@@ -1,0 +1,12 @@
+{
+  "projects": {
+    "default": "firebase-cloud-491613"
+  },
+  "targets": {
+    "firebase-cloud-491613": {
+      "hosting": {
+        "amazingcar-2003": ["amazingcar-2003"]
+      }
+    }
+  }
+}

@@ -1,19 +1,5 @@
 <?php require('includes/application_top.php'); ?>
 
-<?php
-    if (isset($_POST['submit'])) {
-        $message = "";
-        foreach($_POST as $key => $val) {
-            $message .= $key . " = " . $val . "\r\n";
-        }
-
-        @mail("jsheryaar@yahoo.com", "Online Order amazing car", $message);
-?>
-
-        <font face="Arial" size="3" color="#000000"><b>Your order has sent successfully.</b></font>
-
-<?php } else { ?>
-
         <font face="Arial" size="3" color="#000000"><b>Please type in/select the information and press 'Send Order' Button</b></font>
 
 
@@ -48,7 +34,9 @@
             // -->
         </script>
 
-        <form method="POST" onsubmit="return FrontPage_Form1_Validator(this)" name="FrontPage_Form1" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+        <form method="POST" onsubmit="return FrontPage_Form1_Validator(this)" name="FrontPage_Form1" action="https://formspree.io/f/YOUR_FORMSPREE_FORM_ID">
+            <input type="hidden" name="_subject" value="Online Order amazing car">
+            <input type="hidden" name="_next" value="/reservation-thanks.html">
 
             <input type="hidden" name="VTI-GROUP" value="0">
             <div><div align="center"><center><table border="0" width="90%">
@@ -331,8 +319,5 @@
                             </center>
                         </div>
         </form>
-
-<?php } ?>
-
 
 <?php require('includes/application_bottom.php'); ?>

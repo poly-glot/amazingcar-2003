@@ -5,8 +5,6 @@ node_modules/
 .DS_Store
 crash.log
 crash.*.log
-mysql.yaml
-values.local.yaml
 
-.ddev/**
-!.ddev/config.yaml
+dist/
+.firebase/
